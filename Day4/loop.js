@@ -97,4 +97,15 @@ for (let i = 1; i <= 10; i++){
     // console.log(i);
 }
 
+// 9. print number from 1 to 10 using for loop but break the loop after 7 using break.
 
+
+for (let i = 0; i <= 10; i++) {
+   if (i === 7) {
+      break;
+   }
+
+//    console.log(i);
+}
+
+// *********************************** Day 4: Task complete ***********************************
