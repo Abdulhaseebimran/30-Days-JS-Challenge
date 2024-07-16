@@ -27,7 +27,19 @@ let i = 1;
 
 while (i <= 10) {
     sum += i;
-    sum++;
     i++;
-    console.log("Sum of numbers from 1 to 10: ", sum);
 }
+
+console.log("sum of number 1 to 10: " + sum);
+
+// 4. print number from 10 to 1 using while loop
+
+//reverse order
+let j = 10;
+
+while ( j >= 1){
+    console.log(j); 
+    j--;
+}
+
+
