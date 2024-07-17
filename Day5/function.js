@@ -95,3 +95,35 @@ const greetingMessag = (name, age) => {
 
 console.log(greetingMessag('Abdul', 21));
 console.log(greetingMessag('Haseeb', 21));
+
+// ****************************** Task 5: Higher Order function *****************************
+
+// 9. higher order function that takes a function as a number, and call the function many times.
+
+function simpleGreet (){
+    console.log("Hello Users");
+}
+
+let callFunction = (func, num) => {
+    for (let i = 0; i < num; i++){
+        func();
+    }
+}
+
+callFunction(simpleGreet, 4);
+
+// 10. higher order function that takes two function as a value, applies the function and return the result.
+
+const callFunctions1 = (val)=>{
+    return val * 2;
+}
+
+const callFunctions2 = (val2)=>{
+     return val2 * 3;
+}
+
+const higherOrderfunc = (func1, func2, val) =>{
+    return func2(func1(val));
+}
+
+console.log(higherOrderfunc(callFunctions1, callFunctions2, 10));
