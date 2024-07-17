@@ -89,12 +89,12 @@ const defaultParameter = (a, b) => {
 
 // 8. function that takes person name, age and return a greeting message.
 
-const greetingMessag = (name, age) => {
+const greetingMessage = (name, age) => {
     return `Hello ${name}, you are ${age} years old`;
 }
 
-console.log(greetingMessag('Abdul', 21));
-console.log(greetingMessag('Haseeb', 21));
+console.log(greetingMessage('Abdul', 21));
+console.log(greetingMessage('Haseeb', 21));
 
 // ****************************** Task 5: Higher Order function *****************************
 
