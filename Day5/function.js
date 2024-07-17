@@ -77,3 +77,21 @@ const checkChar = (str, char) => {
 
 // ************************** Task 4: function with default parameter **************************
 
+// 7. function that takes two parameter and return the product. provide a default value for the second parameter.
+
+let b = 10;
+const defaultParameter = (a, b) => {
+    return a * b;
+}
+
+// console.log(defaultParameter(10, b));
+// console.log(defaultParameter(10, 2));
+
+// 8. function that takes person name, age and return a greeting message.
+
+const greetingMessag = (name, age) => {
+    return `Hello ${name}, you are ${age} years old`;
+}
+
+console.log(greetingMessag('Abdul', 21));
+console.log(greetingMessag('Haseeb', 21));
