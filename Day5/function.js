@@ -51,3 +51,29 @@ function concatString (str1, str2){
 // console.log(concatString('Abdul', 'Haseeb'));
 
 // ********************************* Task 3: Arrow function *********************************
+
+// 5. arrow function to calculate the sum of two numbers and return the result.
+
+const sumOfTwoNum = (a, b) => {
+    return a + b;
+}
+
+// console.log(sumOfTwoNum(10, 20));
+// console.log(sumOfTwoNum(20, 30));
+
+// 6. arrow functions to check if a string contain specific character and return the boolean result.
+
+const checkChar = (str, char) => {
+    if (str.includes(char)){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+// console.log(checkChar('Hello', 'e'));
+// console.log(checkChar('World', 'w'));
+
+
+// ************************** Task 4: function with default parameter **************************
+
