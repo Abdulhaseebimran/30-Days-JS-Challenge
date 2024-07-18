@@ -60,7 +60,9 @@ console.log("Double number using map method: ",doubledNum);
 // Task 8: Use the filter method to create a new array with only even numbers and log the new array.
 
 const filteredNum = doubledArray.filter((num) => {
-
+      return num % 2 === 0;
 });
+
+console.log("Even numbers using filter method: ",filteredNum);
 
 
