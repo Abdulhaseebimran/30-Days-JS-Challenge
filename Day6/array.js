@@ -72,3 +72,23 @@ const sum = doubledArray.reduce((acc, num) => {
 });
 
 console.log("Sum of all numbers in array: ",sum);
+
+// ************************* Task 4: Arrays Iterations *****************************
+
+// Task 10: Use a for loop to iterate over the array and log each element to the console.
+
+const countries = ['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland'];
+
+for(let i = 0; i < countries.length; i++){
+    // console.log(countries[i].toUpperCase());
+}
+
+// Task 11: Use the forEach method to iterate over the array and log each element to the console.
+
+countries.forEach((country) => {
+    // if (country === 'Finland') {
+    //     console.log('Helsinki');
+    // }
+    console.log(country.toUpperCase());
+});
+
