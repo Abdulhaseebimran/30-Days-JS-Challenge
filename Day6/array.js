@@ -65,4 +65,10 @@ const filteredNum = doubledArray.filter((num) => {
 
 console.log("Even numbers using filter method: ",filteredNum);
 
+// Task 9: Use the reduce method to calculate the sum of all numbers in the array and log the result.
 
+const sum = doubledArray.reduce((acc, num) => {
+    return acc + num;
+});
+
+console.log("Sum of all numbers in array: ",sum);
