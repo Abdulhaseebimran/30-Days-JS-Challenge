@@ -92,3 +92,19 @@ countries.forEach((country) => {
     console.log(country.toUpperCase());
 });
 
+// ***************************** Task 5: Multidimensional Arrays ***************************
+
+// Task 12: Access and log a specific element from the two-dimensional array
+
+const twoDimensionalArr = [[1,2,33,44,55], [6,66,47,87,100]];
+
+console.log(twoDimensionalArr[1][1]);
+console.log(twoDimensionalArr[0][3]);
+
+// Task 13: Access and log a specific element from the two-dimensional array.
+
+const elements = twoDimensionalArr[1][2];
+
+console.log(elements); // 47
+
+
