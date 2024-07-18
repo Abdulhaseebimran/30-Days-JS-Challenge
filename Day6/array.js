@@ -107,4 +107,54 @@ const elements = twoDimensionalArr[1][2];
 
 console.log(elements); // 47
 
+// *********************** Features request ******************************
 
+const numbers = [1,2,3,4,5];
+numbers.push(6)
+console.log(numbers);
+numbers.pop();
+console.log(numbers);
+
+numbers.shift();
+console.log(numbers);
+
+numbers.unshift(1);
+console.log(numbers);
+
+// 2. Array Transformation Script: Create a script that uses map, filter, and reduce methods to transform and aggregate array data.
+
+const newMap = numbers.map((num) => {
+    return num * 4;
+});
+
+console.log(newMap);
+
+const newReduces = numbers.reduce((res,acc) => {
+        return res + acc;
+}, 0);
+
+console.log(newReduces);
+
+const newFilterNum = numbers.filter((num) => {
+    return num %2 !== 0;
+});
+
+console.log(newFilterNum);
+
+// 3. Array Iteration Script: Write a script that iterates over an array using both for loop and forEach method and logs each element.
+
+for (let i = 0; i < numbers.length; i++) {
+    // console.log(i);
+}
+
+numbers.forEach((num) => {
+    console.log(num);
+});
+
+// 4. Two-dimensional Array Script: Create a script that demonstrates the creation and manipulation of a two-dimensional array.
+
+const two_d_arrays = [[1,2,3], [4,5,6]];
+console.log(two_d_arrays[1][1]);//5
+
+two_d_arrays[1][1] = 5.5;
+console.log(two_d_arrays);
