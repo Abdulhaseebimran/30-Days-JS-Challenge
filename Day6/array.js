@@ -43,6 +43,24 @@ numArr.unshift(0);
 
 console.log(numArr);
 
+// ************************* Task 3: Arrays Methods Intermediate *****************************
 
+// Task 7: Use the map method to create a new array where each number is doubled and log the new array.
+
+
+const doubledArray = [0,1,2,3,4,5,6];
+
+
+const doubledNum = doubledArray.map((num)=>{
+    return num * 2;
+});
+
+console.log("Double number using map method: ",doubledNum);
+
+// Task 8: Use the filter method to create a new array with only even numbers and log the new array.
+
+const filteredNum = doubledArray.filter((num) => {
+
+});
 
 
