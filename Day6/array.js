@@ -18,6 +18,31 @@ console.log("first element of array: ",firstElement);
 const lastElement = numArr[numArr.length-1];
 console.log("Last Element of array: ",lastElement);
 
+// ************************* Task 2: Arrays Methods Basic *****************************
+
+// Task 3:
+
+numArr.push(6); // add to end of array
+console.log(numArr);
+
+// Task 4:
+
+numArr.pop(); // remove from end of array
+
+console.log(numArr);
+
+// Task 5:
+
+numArr.shift(); // remove from start of array
+
+console.log(numArr);
+
+// Task 6:
+
+numArr.unshift(0);
+
+console.log(numArr);
+
 
 
 
