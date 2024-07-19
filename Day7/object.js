@@ -84,3 +84,16 @@ let bookTitle = library.books.map(book => book.title);
 
 // console.log(`The books in the library are ${bookTitle.join(", ")}`);
 
+
+// ********************* Task 4: Add this keywords **********************
+
+ // Task 7: Add a method to the book object that uses the this keyword to return a string with the book's title and year, and log the result of calling this method.
+
+book.addAdditionalInfo = function () {
+    return `${this.title} was published in ${this.year}`;
+}
+
+// console.log(book);
+
+// console.log(book.addAdditionalInfo());
+
