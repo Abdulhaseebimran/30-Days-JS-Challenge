@@ -40,3 +40,47 @@ book.updateYear = function (year) {
 book.updateYear(2025);
 
 // console.log(`book ${JSON.stringify(book.year)}`);
+
+// ********************* Task 3: Nested Objects **********************
+
+// Task 5: Create a nested object representing a library with properties like name and books (an array of book objects), and log the library object to the console.
+
+const library = {
+    name: "Abdul's Library",
+    books: [
+        book,
+        {
+            title: "JavaScript for Beginners",
+            author: "John Doe",
+            year: 2022,
+        },
+        {
+            title: "Python for Beginners",
+            author: "Steve Smith",
+            year: 2021,
+        },
+        {
+            title: "Java for Beginners",
+            author: "Harry Potter",
+            year: 2020,
+        },
+        {
+            title: "React.js for Beginners",
+            author: "Chai code",
+            year: 2019,
+        }
+    ]
+}
+
+// console.log(`library ${JSON.stringify(library)}`);
+
+// Task 6: Access and log the name of the library and the titles of all the books in the library.
+
+let libraryName = library.name;
+
+// console.log(`The library name is ${libraryName}`);
+
+let bookTitle = library.books.map(book => book.title);
+
+// console.log(`The books in the library are ${bookTitle.join(", ")}`);
+
