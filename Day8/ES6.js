@@ -42,3 +42,25 @@ const { title, author } = Book;
 
 console.log(title, author);
 
+// ********************* Task 3: Spread and Rest Operator **********************
+
+// task 5:
+
+const fruits = ["Apple", "Banana", "Mango", "Orange"];
+
+const newFruits = [...fruits, "Grapes", "Pineapple", "Peach"];
+
+// console.log(newFruits);
+
+// Task 6:
+
+function sum(...args) {
+  let total = 0;
+  for (let i = 0; i < args.length; i++) {
+    total += args[i];
+  }
+  return total;
+}
+
+// console.log(sum(1, 2, 3, 4, 5));
+
