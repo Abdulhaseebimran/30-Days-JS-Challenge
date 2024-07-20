@@ -75,3 +75,37 @@ function defaultParameter(num1, num2 = 5) {
   // console.log(defaultParameter(5));
   // console.log(defaultParameter(5, 10));
   
+  // ********************* Task 5: Enchanced Object literals **********************
+  
+  // task 8:
+  
+  let person = {
+    name: "Abdul haseeb",
+    age: 21,
+    city: "Karachi",
+  
+    printInfo() {
+      return `Hello Everyone, My name is ${this.name} and I am ${this.age} years old. I live in ${this.city}.`;
+    },
+  };
+  
+  // console.log(person.printInfo());
+  // console.log(person);
+  
+  // Task 9:
+  
+  let key = "name";
+  
+  let person2 = {
+    [key]: "Abdul Haseeb",
+    age: 21,
+    city: "Karachi",
+  
+    printInfo() {
+      return `Hello Everyone, My name is ${this.name} and I am ${this.age} years old. I live in ${this.city}.`;
+    },
+  };
+  
+  // console.log(person2.printInfo());
+  
+  console.log(person2);
