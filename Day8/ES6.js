@@ -19,3 +19,26 @@ JavaScript and React.js, vue.js, and Node.js.`;
 
 // console.log(multiLineString);
 
+// ********************* Task 2: Destructuring **********************
+
+// task 3:
+
+const destructureArrayNum = ["Abdul Haseeb", 25, "Karachi", "Pakistan"];
+
+const [first, second] = destructureArrayNum;
+
+console.log(first, second);
+
+// task 4:
+
+const Book = {
+  title: "JavaScript",
+  author: "Abdul Haseeb",
+  price: 500,
+  publisher: "Chai Code",
+};
+
+const { title, author } = Book;
+
+console.log(title, author);
+
