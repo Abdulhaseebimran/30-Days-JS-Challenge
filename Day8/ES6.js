@@ -64,3 +64,14 @@ function sum(...args) {
 
 // console.log(sum(1, 2, 3, 4, 5));
 
+// ********************* Task 4: Default Parameter **********************
+
+// Task 7:
+
+function defaultParameter(num1, num2 = 5) {
+    return num1 + num2;
+  }
+  
+  // console.log(defaultParameter(5));
+  // console.log(defaultParameter(5, 10));
+  
