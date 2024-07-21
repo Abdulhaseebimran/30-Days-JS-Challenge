@@ -112,3 +112,34 @@ const elementChanging = () => {
 elementChanging();
 
 
+// Task 5: Event Handling.
+
+// 9: Add a click event listener to the button that changes the text content of paragraph
+
+const eventChangetext = () => {
+    const para = document.querySelector(".haseeb");
+    const changeText = document.querySelector(".changeText");
+ 
+    const handleClick = () => {
+        para.textContent = "I am a software developer";
+    }
+
+    changeText.addEventListener("click", handleClick);
+}
+
+eventChangetext();
+
+// 10: Add a mouseover event listener to an element that changes its border color . 
+
+
+const eventMouseOver = () => {
+    const mouseover = document.querySelector(".mouseover");
+
+    const handleMouseOver = () => {
+        mouseover.style.border = "2px solid red";
+    }
+
+    mouseover.addEventListener("mouseover", handleMouseOver);
+}
+
+eventMouseOver();
