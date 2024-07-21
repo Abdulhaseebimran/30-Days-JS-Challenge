@@ -20,3 +20,33 @@ const bgChange = () => {
 
 bgChange();
 
+// Task 2: Creating and Appending elements.
+
+// 3: Create an new div element with some text content and append it to the body
+
+const appendDiv = () => {
+    const createDiv = document.createElement("div");
+
+    createDiv.textContent = "I am a new div";
+    console.log(createDiv);
+
+    createDiv.style.fontSize = "20px";
+    
+    document.body.appendChild(createDiv);  // append div into the body.
+}
+
+appendDiv();
+
+// 4: Create a new li element and add it to existing ul list 
+
+const appendList = () => {
+    const createUl = document.querySelector(".fruits");
+    const fruits = document.createElement("li");
+
+    fruits.textContent = "Apple";
+    
+    createUl.appendChild(fruits);
+}
+
+appendList();
+
