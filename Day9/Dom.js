@@ -79,3 +79,36 @@ const removeLastChild = () => {
 removeLastChild();
 
 
+// Task 4: Modifying elements and Classes.
+
+
+// 7: Select an HTML element and change one of its attributes (eg : src of an img tag ).
+
+
+const imgElement = () => {
+    const img = document.querySelector(".image");
+
+    img.src = "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png";
+    img.alt = "Google Logo";
+    img.style.width = "100px";
+    img.style.height = "50px";
+
+}
+
+imgElement();
+
+
+// 8: Add and remove a css class to and from an html elements 
+
+const elementChanging = () => {
+    const newPara = document.querySelector(".para");
+    newPara.classList.add("newParagraph");
+    newPara.classList.remove("para");
+
+    console.log(newPara);
+
+}
+
+elementChanging();
+
+
