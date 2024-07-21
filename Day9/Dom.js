@@ -50,3 +50,32 @@ const appendList = () => {
 
 appendList();
 
+// Task 3: Removing elements.
+
+// 5: Select an HTML element and remove it from the DOM 
+
+const removeElements = () => {
+    const createElement = document.createElement("div");
+    
+    createElement.textContent = "hello I am a new div to remove.";
+    // console.log(createElement);
+    document.body.appendChild(createElement);
+
+    createElement.remove();
+}
+
+removeElements();
+
+// 6:  Remove the last child of a specific HTML element
+
+const removeLastChild = () => {
+    const list = document.querySelector(".fruits");
+
+    // console.log(list);
+
+    list.lastChild.remove(); // remove Apple from li list.
+}
+
+removeLastChild();
+
+
