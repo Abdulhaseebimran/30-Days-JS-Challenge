@@ -77,4 +77,31 @@ selectDropdown.addEventListener("change", (e) => {
   para2.textContent = "I am from : " + selectDropdown.value;
 });
 
+// Task 5: event delegation
 
+// 9: Add a click event listener to a list that logs the text content of the clicked list item using event delegation.
+
+const ul = document.querySelector("ul");
+
+ul.addEventListener("click", (e) => {
+  if (e.target.tagName === "LI") {
+    console.log(e.target.textContent);
+  }
+});
+
+// 10: Add a click event listener to a parent element that listens for events from a dynamically added child elements.
+
+const parentUL = document.querySelector("#parent");
+const addBtn = document.querySelector("#btn");
+
+addBtn.addEventListener("click", () => {
+  const li = document.createElement("li");
+  li.textContent = "New List Item";
+  parentUL.appendChild(li);
+});
+
+parentUL.addEventListener("click", (e) => {
+  if (e.target && e.target.nodeName === "LI") {
+    console.log("Clicked list item text:", e.target.textContent);
+  }
+});
