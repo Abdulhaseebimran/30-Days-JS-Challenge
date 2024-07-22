@@ -21,3 +21,5 @@ welcome to the 30 days of JavaScript challenge. This repository is designed to h
 ### Day 8: ES6 Features
 
 ### Day 9: DOM Manipulation
+
+### Day 10: Events Handling
