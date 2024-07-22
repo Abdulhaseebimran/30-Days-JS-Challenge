@@ -54,4 +54,27 @@ input2.addEventListener("keyup", (e) => {
   displayPara.innerHTML = input2.value;
 });
 
+// Task 4: Form Events
+
+// 7: Add a submit event listener to a form that prevents the default submission and logs the form data to the console
+
+const form = document.querySelector("#form");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(form); // get form data
+  const data = Object.fromEntries(formData.entries()); // convert form data to object
+  console.log(data);
+});
+
+// 8: Add a change event listener to a select dropdown that displays the sleceted value in a paragragh.
+
+const selectDropdown = document.querySelector("#mySelect");
+const para2 = document.querySelector("#para2");
+
+selectDropdown.addEventListener("change", (e) => {
+  para2.textContent = "I am from : " + selectDropdown.value;
+});
+
 
