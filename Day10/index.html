@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handling</title>
+</head>
+<style>
+    .img1 {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    #change-div {
+        border: 2px solid black;
+        margin: 20px;
+        width: 500px;
+    }
+</style>
+
+<body>
+    <p class="para1">This is a paragraph 1</p>
+    <button id="btn">Text changed of paragraph</button>
+
+    <img src="./images/medium.webp" alt="image" class="img1" />
+
+    <div id="change-div">
+        <h1>Hello Change Background Color</h1>
+    </div>
+
+    <p>Input Task 1:</p>
+    <input type="text" placeholder="enter your name" class="input-1" />
+
+    <br />
+    <h3>Input Task 2:</h3>
+    <input type="text" placeholder="Type something" class="input-2" />
+    <p id="displayPara">Current value:</p>
+
+    <form id="form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
+        <br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+        <br />
+        <button type="submit">Submit</button>
+    </form>
+    <br /> <br />
+
+    <h3>Form 2:</h3>
+
+    <select name="" id="mySelect">
+        <option value="pakistan">Pakistan</option>
+        <option value="India">India</option>
+        <option value="Oman">Oman</option>
+        <option value="China">China</option>
+    </select>
+    <p id="para2">I am from : </p>
+
+    <div id="parent">
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </div>
+    <button id="btn">Add</button>
+
+    
+    <script src="./event.js"></script>
+</body>
+
+</html>
