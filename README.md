@@ -23,3 +23,5 @@ welcome to the 30 days of JavaScript challenge. This repository is designed to h
 ### Day 9: DOM Manipulation
 
 ### Day 10: Events Handling
+
+### Day 11: Promises and Async/Await
