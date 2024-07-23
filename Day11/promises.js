@@ -24,3 +24,12 @@ const promises2 = new Promise((resolve, reject) => {
 
 promises2.then((res) => console.log(res)).catch((err) => console.log(err));
 
+// Task 2: Chaining Promises.
+
+// 3: create a sequence of promises that simulate fetcing data from a server.Chain the promises to log message in a specific order.
+
+fetch("https://fakestoreapi.com/products")
+  .then((res) => res.json())
+  .then((data) => console.log(`data: ${data}`))
+  .catch((err) => console.log(`Failed to fetch data: ${err}`));
+
