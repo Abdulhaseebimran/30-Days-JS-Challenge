@@ -33,3 +33,29 @@ fetch("https://fakestoreapi.com/products")
   .then((data) => console.log(`data: ${data}`))
   .catch((err) => console.log(`Failed to fetch data: ${err}`));
 
+// Task 3: Using Async/Await
+
+// 4: Write an async function that awaits for a promise to resolve and then logs the resolved value.
+
+async function asyncFunction() {
+    const res = await fetch("https://fakestoreapi.com/products");
+    const data = await res.json();
+    console.log(data);
+  }
+  
+  // asyncFunction();
+  
+  // 5: Write an async function that handles a rejected promise using try-catch and logs the error message.
+  
+  async function asyncHandler() {
+    try {
+      const res = await fetch("https://fakestoreapi.com/products");
+      const data = await res.json();
+      console.log(data);
+    } catch (err) {
+      console.log(`Failed to fetch data: ${err}`);
+    }
+  }
+  
+  // asyncHandler();
+  
