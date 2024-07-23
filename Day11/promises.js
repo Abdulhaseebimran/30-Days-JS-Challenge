@@ -59,3 +59,29 @@ async function asyncFunction() {
   
   // asyncHandler();
   
+  // Task 4: Fetching Data from an API.
+  
+  // 6: /Write an async function that fetches data from an API and logs the data to the console.
+  
+  async function fetchData() {
+    const res = await fetch("http://fakestoreapi.com/products");
+    const data = await res.json();
+    console.log(data);
+  }
+  
+  // fetchData();
+  
+  // 7: Use the 'fetch' API to get data from a publuc API and log the response data to the console using async await.
+  
+  async function fetchAPI() {
+    try {
+      const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+      const data = await res.json();
+      console.log(data);
+    } catch (error) {
+      console.log(`Fetch API Function Failed to fetch data: ${error}`);
+    }
+  }
+  
+  // fetchAPI();
+  
