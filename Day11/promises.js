@@ -85,3 +85,20 @@ async function asyncFunction() {
   
   // fetchAPI();
   
+  // Task 5: Concurrent Promises.
+  
+  // 8: Use 'Promise.all' to write for multiple promises to resolve and log all theoir value.
+  
+  const promiseAll = Promise.all([promises, promises2])
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  
+  // console.log(promiseAll);
+  
+  // 9: Use `Promise.race` to log the value of the first promise that resolves among multiplle promise.
+  
+  const promiseRace = Promise.race([promises, promises2])
+  .then((res) => console.log(res))
+  .catch((err) => console.log(err));
+  
+  // console.log(promiseRace);
