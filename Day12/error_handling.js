@@ -125,21 +125,43 @@ randomPromise()
 // 7:  Use try-catch within an async function to handle errors from a promise that randomly resolves or rejects, and log the error message.
 
 const newPromise = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      let randomNumber = Math.floor(Math.random() * 2);
-      if (randomNumber === 0) resolve("Promise resolved");
-      else reject(new Error("Promise rejected"));
-    }, 1000);
-  });
+  setTimeout(() => {
+    let randomNumber = Math.floor(Math.random() * 2);
+    if (randomNumber === 0) resolve("Promise resolved");
+    else reject(new Error("Promise rejected"));
+  }, 1000);
+});
 
 async function handlePromise() {
-    try {
-      const response = await newPromise;
-      console.log(response);
-    } catch (error) {
-      console.log("ERROR :", error.message);
-    }
+  try {
+    const response = await newPromise;
+    console.log(response);
+  } catch (error) {
+    console.log("ERROR :", error.message);
   }
+}
 
 // handlePromise();
 
+// *********************** Task 5: Graceful Error Handling using fetch ********************
+
+// 8: Use the "fetch" API to request data from an invalid URL and handle the error using ".catch()". Log an appropriate message to the console.
+
+fetch("https://jsonplaceholder.typicode.com/posts")
+  .then((response) => response.json())
+  .then((data) => console.log(data))
+  .catch((error) => console.log(`Error: ${error}`));
+
+// 9: Use the "fetch" API to request data from an invalid URL within an async function and handle the error using try-catch. Log an appropriate error message.
+
+async function fetchData() {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.log(`Error: ${error}`);
+  }
+}
+
+fetchData();
