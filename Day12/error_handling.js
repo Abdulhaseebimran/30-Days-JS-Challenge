@@ -64,3 +64,43 @@ function tryCatchFinally (){
 }
 
 // tryCatchFinally();
+
+// ******************** Task 3:  Custom Error Objects ********************
+
+// 4: Create a custom error class that extends the built-in Error class. Throw an instance of this custom error in a function and handle it using a try-catch block.
+
+class CustomError extends Error {
+    constructor(message){
+        super(message);
+        this.name = 'CustomError';
+    }
+}
+
+function throwError (){
+    try {
+        throw new CustomError('This is a custom error');
+    } catch (error) {
+        console.log(`Error: ${error.message}`);
+    }
+}
+
+// throwError();
+
+// 5:  Write a fucntion that validates user input (e.g. checking if a string is not empty) and throws a custom error if the validation fails. Handle the custom error using try-catch block
+
+function validateInput (input){
+    try {
+        if(input === ''){
+            throw new CustomError('Input cannot be empty');
+        }else{
+            console.log('Input is valid');
+        }
+    } catch (error) {
+        console.log(`Error: ${error.message}`);
+    }
+}
+
+// validateInput('hello');
+// validateInput('');
+// validateInput(10);
+
