@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage Task 1</title>
+</head>
+<body>
+    <h1>Save Your Favorite Quote:</h1>
+    <input
+      type="text"
+      id="quoteInput"
+      placeholder="Enter your favorite quote"
+    />
+    <button id="saveButton">Save Quote</button>
+    <button id="retrieveButton">Retrieve Quote</button>
+    <p id="displayQuote"></p>
+
+    <script>
+        const quoteInput = document.getElementById("quoteInput");
+        const saveButton = document.getElementById("saveButton");
+        const retrieveButton = document.getElementById("retrieveButton");
+        const displayQuote = document.getElementById("displayQuote");
+
+        saveButton.addEventListener("click", () => {
+            localStorage.setItem("quote", quoteInput.value);
+            quoteInput.value = "";
+        });
+
+        retrieveButton.addEventListener("click", () => {
+            displayQuote.textContent = localStorage.getItem("quote");
+        });
+    </script>
+</body>
+</html>

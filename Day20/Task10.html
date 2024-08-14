@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clears Data</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accept Key value Pair for both Session</title>
+  </head>
+  <body>
+    <h1>Comparing LocalStorage and SessionStorage</h1>
+
+    <script>
+      // save data in key value pair
+      const saveToStorage = (key, value) => {
+        localStorage.setItem(key, JSON.stringify(value));
+        sessionStorage.setItem(key, JSON.stringify(value));
+      };
+
+      saveToStorage("Key", "Value");
+
+      console.log(JSON.parse(localStorage.getItem("Key")));
+      console.log(JSON.parse(sessionStorage.getItem("Key")));
+
+      // delete and clear the data from storage
+
+      const clearDataFromStorage = () => {
+        localStorage.clear();
+        sessionStorage.clear();
+      }
+
+      clearDataFromStorage();
+
+      if (localStorage.length === 0) {
+        console.log("Local storage is clear");
+      }else{
+        console.log("Local storage is not clear");
+      }
+
+      if (sessionStorage.length === 0) {
+        console.log("Session storage is clear");
+      }else{
+        console.log("Session storage is not clear");
+        
+      }
+    </script>
+  </body>
+</html>
+</body>
+</html>
