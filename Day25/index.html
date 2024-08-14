@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Search App | Project 2</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">Movies Search</div>
+      <form id="search-form">
+        <form id="search-form">
+          <input type="text" id="search-input" placeholder="Search for movies..." />
+          <button class="btn search-btn" type="submit">
+            Search
+          </button>
+        </form>
+    </nav>
+  </header>
+
+  <main>
+    <section id="popular-movies">
+      <h2>Popular Movies</h2>
+      <div class="movie-grid" id="popular-movies-grid"></div>
+    </section>
+
+    <section id="trending-movies">
+      <h2>Trending Movies</h2>
+      <div class="movie-grid" id="trending-movies-grid"></div>
+    </section>
+
+    <section id="search-results" class="hidden">
+      <h2>Search Results</h2>
+      <div class="movie-grid" id="search-results-grid"></div>
+    </section>
+  </main>
+  <div id="movie-details-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-body">
+        <img id="modal-poster" src="" alt="Movie Poster" />
+        <h2 id="modal-title"></h2>
+        <p id="modal-overview"></p>
+        <p id="modal-rating"></p>
+        <p id="modal-release-date"></p>
+      </div>
+    </div>
+  </div>
+  <footer id="app-footer">
+    <div class="footer-content">
+      <p>&copy; 2024 Movie Search App by Abdul Haseeb Imran. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="https://github.com/Abdulhaseebimran" target="_blank">
+          <i class="fab fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/abdul-haseeb-36a917230/" target="_blank">
+          <i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://www.instagram.com/abdul_haseeb_imran" target="_blank">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
