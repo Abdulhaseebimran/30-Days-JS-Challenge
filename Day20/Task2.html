@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage Task 2: User Details</title>
+</head>
+<body>
+    <h1>User Details:</h1>
+    <input type="text" id="nameInput" placeholder="Enter your name" />
+    <input type="number" id="ageInput" placeholder="Enter your age" />
+    <input type="email" id="emailInput" placeholder="Enter your email" />
+    <button id="saveButton">Save Details</button>
+    <button id="retrieveButton">Retrieve Profile</button>
+    <p id="displayProfile"></p>
+
+    <script>
+        const saveButton = document.getElementById('saveButton');
+        const retrieveButton = document.getElementById('retrieveButton');
+        const displayProfile = document.getElementById('displayProfile');
+
+        saveButton.addEventListener('click', () => {
+            const name = document.getElementById('nameInput').value;
+            const age = document.getElementById('ageInput').value;
+            const email = document.getElementById('emailInput').value;
+
+            localStorage.setItem('name', name);
+            localStorage.setItem('age', age);
+            localStorage.setItem('email', email);
+        });
+
+        retrieveButton.addEventListener('click', () => {
+            const name = localStorage.getItem('name');
+            const age = localStorage.getItem('age');
+            const email = localStorage.getItem('email');
+
+            displayProfile.textContent = `Name: ${name}, Age: ${age}, Email: ${email}`;
+        });
+    </script>
+</body>
+</html>
