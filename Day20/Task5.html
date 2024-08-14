@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5: Session Storage</title>
+</head>
+<body>
+    <h1>Temporary Message Store</h1>
+    <div class="message-info">
+        <input
+          type="text"
+          id="messageInput"
+          placeholder="Enter a temporary message"
+        />
+        <button id="saveButton">Save Message</button>
+        <button id="retrieveButton">Retrieve Message</button>
+      </div>
+      <pre id="display"></pre>
+
+    <script>
+        const messageInput = document.getElementById("messageInput");
+        const saveButton = document.getElementById("saveButton");
+        const retrieveButton = document.getElementById("retrieveButton");
+        const display = document.getElementById("display");
+
+        saveButton.addEventListener("click", () => {
+            sessionStorage.setItem("message", messageInput.value);
+            messageInput.value = "";
+        });
+
+        retrieveButton.addEventListener("click", () => {
+            display.textContent = sessionStorage.getItem("message");
+        });
+    </script>
+</body>
+</html>
