@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Converting into JSON String</title>
+  </head>
+  <body>
+    <h1>User Preferences Storage</h1>
+    <div class="preferences-info">
+      <label for="themeSelect">Select Theme:</label>
+      <select id="themeSelect">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+      <br /><br />
+      <label for="languageSelect">Select Language:</label>
+      <select id="languageSelect">
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+      </select>
+      <br /><br />
+      <button id="saveButton">Save Preferences</button>
+      <button id="retrieveButton">Retrieve Preferences</button>
+    </div>
+    <pre id="log"></pre>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const saveButton = document.getElementById("saveButton");
+        const retrieveButton = document.getElementById("retrieveButton");
+        const log = document.getElementById("log");
+
+        const logMessage = (message) => {
+          log.innerText += `${message}\n`;
+        };
+
+        saveButton.addEventListener("click", () => {
+          const themeSelect = document.getElementById("themeSelect");
+          const languageSelect = document.getElementById("languageSelect");
+
+          const userPreferences = {
+            theme: themeSelect.value,
+            languageSelect: languageSelect.value,
+          };
+
+          const userPreferencesString = JSON.stringify(userPreferences);
+          logMessage(
+            `Preferences saved: ${JSON.stringify(userPreferences, null, 2)}`
+          );
+        });
+
+        retrieveButton.addEventListener("click", () => {
+          const userPreferencesString = localStorage.getItem("userPreferences");
+          if (userPreferencesString) {
+            const userPreferences = JSON.parse(userPreferencesString);
+            logMessage(
+              `Preferences retrieved: ${JSON.stringify(userPreferences, null, 2)}`
+            );
+          } else {
+            logMessage("No preferences saved yet.");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
