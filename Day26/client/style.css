@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 500px;
+    /* height: 250px; */
+    background-color: #0b0579;
+    border-radius: 14px;
+    box-shadow: 0 0 10px rgba(0, 0.2, 0, 0.2);
+    overflow: hidden;
+}
+
+header {
+    background-color: #0b0579;
+    color: #fff;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.chat-messages {
+    height: 400px;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.input-area {
+    display: flex;
+    padding: 20px;
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+}
+
+#chatInput {
+    flex-grow: 1;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    outline: none;
+    transition: background-color 0.3s;
+    background-color: #c4c4c4;
+}
+ 
+
+#sendButton {
+    background-color: #0b0579;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px;
+}
+
+#sendButton:hover {
+    background-color: rgb(132, 0, 0);
+}
+
+#sendButton > i {
+    color: white;
+}
+
+.message {
+    margin-bottom: 12px;
+    padding: 12px;
+    border-radius: 15px;
+    max-width: 60%;
+    position: relative;
+    font-size: 1.1rem;
+}
+
+.sent {
+    background-color: #c8f4a7;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.received {
+    background-color: #f1f1f1;
+    align-self: flex-start;
+}
+
+
+.message strong {
+    font-weight: 600;
+    color: #333;
+    margin-right: 5px;
+}
+
+.received strong {
+    color: #333;
+}
+
+
+#loginContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#usernameInput {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1.2rem;
+    transition: border-color 0.3s;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#loginButton {
+    padding: 10px 20px;
+    background-color: #0b0579;
+    width: 100%;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+#loginButton:hover {
+    background-color: rgb(132, 0, 0);
+}
