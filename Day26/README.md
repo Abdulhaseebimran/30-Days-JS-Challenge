@@ -90,7 +90,7 @@ To get started with the chat application, follow these steps:
 
 Feel free to reach out with any questions or feedback:
 
-- **GitHub**: [megh-bari](https://github.com/Abdulhaseebimran)
+- **GitHub**: [Abdulhaseebimran](https://github.com/Abdulhaseebimran)
 
 ## Author
 
